@@ -1,3 +1,8 @@
+# The entirety of the following code was taken as boilerplate code from:
+# https://www.deviceplus.com/connect/integrate-rfid-module-raspberry-pi/
+#
+# Anything marked as written by Christopher Berry is my own code.
+
 import RPi.GPIO as GPIO
 import MFRC522
 import signal
@@ -56,6 +61,10 @@ while continue_reading:
         # Select the scanned tag
         MIFAREReader.MFRC522_SelectTag(uid)
         
+	################################
+	# Written By Christopher Berry #
+	################################
 	interface.process_rfid(uid)	
+	################################
 
 	time.sleep(3)
