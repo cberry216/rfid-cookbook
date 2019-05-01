@@ -59,21 +59,3 @@ while continue_reading:
 	interface.process_rfid(uid)	
 
 	time.sleep(3)
-
-        #ENTER Your Card UID here
-        #my_uid = [180,92,97,19,154]
-        
-        #Configure LED Output Pin
-        #LED = 18
-        #GPIO.setup(LED, GPIO.OUT)
-        #GPIO.output(LED, GPIO.LOW)
-        
-        #Check to see if card UID read matches your card UID
-        #if uid == my_uid:                #Open the Doggy Door if matching UIDs
-        #    print("Access Granted")
-        #    GPIO.output(LED, GPIO.HIGH)  #Turn on LED
-        #    time.sleep(5)                #Wait 5 Seconds
-        #    GPIO.output(LED, GPIO.LOW)   #Turn off LED
-            
-        #else:                            #Don't open if UIDs don't match
-        #    print("Access Denied, YOU SHALL NOT PASS!")
