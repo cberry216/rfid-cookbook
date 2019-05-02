@@ -10,7 +10,7 @@ uid = input("Enter UID values: ")
 
 while True:
     uid_vals = list(map(lambda x: int(x), uid.split(',')))
-    if len(uid) != 5:
+    if len(uid_vals) != 5:
         uid = input("Invalid UID length (5 Numbers): ")
         continue
 
