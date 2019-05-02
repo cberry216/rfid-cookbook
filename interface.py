@@ -35,13 +35,13 @@ class Interface:
 
         recipe['ingredients'] = []
         for ingredient in result[INDEX_INGREDIENTS].split('|'):
-	    if ingredient != "":
-            	recipe['ingredients'].append(ingredient)
+            if ingredient != "":
+                recipe['ingredients'].append(ingredient)
 
         recipe['instructions'] = []
         for instruction in result[INDEX_INSTRUCTIONS].split('|'):
-	    if instruction != "":
-            	recipe['instructions'].append(instruction)
+            if instruction != "":
+                recipe['instructions'].append(instruction)
 
         return recipe
 
@@ -79,7 +79,6 @@ class Interface:
 
         return self.add_recipe(rfid, name, ingredients, instructions)
 
-
     def print_recipe(self, recipe):
         name = recipe['name']
         ingredients = recipe['ingredients']
@@ -90,27 +89,25 @@ class Interface:
         INGREDIENTS_SPACE_LENGTH = int(((len("ingredients") - LINE_LENGTH) / 2) - 2)
         INSTRUCTIONS_SPACE_LENGTH = int(((len("instructions") - LINE_LENGTH) / 2) - 2)
 
-	print("*" * LINE_LENGTH)
+        print("*" * LINE_LENGTH)
         print(name)
         print("*" * LINE_LENGTH)
-	print("*")
+        print("*")
 
-	print("*- Ingredients")
-	print("*")
-        
+        print("*- Ingredients")
+        print("*")
+
         for ingredient in ingredients:
             print("* " + ingredient)
-	
-	print("*")
-	print("*- Instructions")
-	print("*")
+
+        print("*")
+        print("*- Instructions")
+        print("*")
 
         for i in range(len(instructions)):
             print("* " + str(i + 1) + ") " + instructions[i])
-	
+
         print("*" * LINE_LENGTH)
-
-
 
     def process_rfid(self, rfid):
         rfid = str(rfid[0]) + str(rfid[1]) + str(rfid[2]) + str(rfid[3]) + str(rfid[4])
